@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export function App() {
   return (
     <Countainer>
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
       <TitlePhone>Phonebook</TitlePhone>
 
       <Form />
