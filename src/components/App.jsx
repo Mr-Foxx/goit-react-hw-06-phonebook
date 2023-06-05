@@ -3,24 +3,13 @@ import { TitleContact, TitlePhone } from './Styles/Titles';
 import { Contacts } from './Contacts/Contacts';
 import { Form } from './Form/Form';
 import { Filter } from './Filter/Filter';
-
-// const CONTACTS_KEY = 'contacts';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function App() {
-  // const [contacts, setContacts] = useState(
-  //   () =>
-  //     JSON.parse(window.localStorage.getItem(CONTACTS_KEY)) ?? initialContacts
-  // );
-  // console.log(contacts);
-
-  // const [filter, setFilter] = useState('');
-
-  // useEffect(() => {
-  //   localStorage.setItem(CONTACTS_KEY, JSON.stringify(contacts));
-  // }, [contacts]);
-
   return (
     <Countainer>
+      <ToastContainer />
       <TitlePhone>Phonebook</TitlePhone>
 
       <Form />

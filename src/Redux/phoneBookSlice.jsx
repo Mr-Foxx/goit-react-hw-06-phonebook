@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { initialContacts } from '../components/App';
 import { nanoid } from 'nanoid';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const initialContacts = [
   { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -21,7 +22,7 @@ const phoneBookSlice = createSlice({
       const checkContact = state.contacts.find(item => item.name === name);
 
       if (checkContact !== undefined) {
-        alert(`${name} is already in contacts.`);
+        toast.success(`${name} is already in contacts.`);
       } else {
         const newContact = {
           id: nanoid(),
